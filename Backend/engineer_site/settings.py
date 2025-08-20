@@ -79,7 +79,12 @@ WSGI_APPLICATION = 'engineer_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'plumbing_solutions_db',
+        'USER': 'root',
+        'PASSWORD': 'Rangers123',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        
     }
 }
 
