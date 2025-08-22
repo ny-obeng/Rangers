@@ -1,0 +1,216 @@
+/* Navbar (your provided CSS is used) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-item {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #0d233e;
+  color: #fff;
+}
+
+.active {
+  background-color: #0d233e;
+  color: #fff;
+}
+/* Remove default body margin */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Push down content so it doesn’t hide behind navbar */
+main, .content, .services-section {
+    margin-top: 0; /* adjust this value to match your navbar height */
+}
+
+/* Hero Section */
+.about-hero {
+	margin-top: 90px;
+	text-align: center;
+	padding: 3rem 1rem 2rem 1rem;
+	background: #0d233e;
+	color: #fff;
+	border-radius: 0 0 32px 32px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+}
+.about-hero h1 {
+	font-size: 2.8rem;
+	margin-bottom: 0.7rem;
+	font-weight: 700;
+    color: #ffffff;
+}
+.about-hero p {
+	font-size: 1.3rem;
+	font-weight: 400;
+    color: #ffffff;
+}
+
+/* About Content Section */
+.about-content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 40px;
+	padding: 3rem 1rem 2rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.about-image {
+	flex: 1 1 350px;
+	max-width: 700px;
+	min-width: 300px;
+}
+.about-image img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 16px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.about-text {
+	flex: 1 1 350px;
+	max-width: 700px;
+	min-width: 300px;
+	margin: 0 auto;
+}
+.about-text h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	color: #6cb6f7;
+}
+.about-text p {
+	text-align: left;
+	font-size: 1.15rem;
+	margin-bottom: 1.2rem;
+	line-height: 1.7;
+}
+.about-text ul {
+	text-align: left;
+	font-size: 1.1rem;
+	margin-left: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+.about-text li {
+	margin-bottom: 0.5rem;
+}
+
+/* Products Gallery Section */
+.products-gallery {
+	padding: 3rem 1rem 2rem 1rem;
+	background: #f7f7f7;
+	text-align: center;
+}
+.products-gallery h2 {
+	font-size: 2rem;
+	color: #6cb6f7;
+	margin-bottom: 2rem;
+}
+.products-gallery > div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 32px;
+}
+.products-gallery .product-card {
+	width: 250px;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	padding: 18px 12px 12px 12px;
+	text-align: center;
+	transition: transform 0.3s;
+}
+.products-gallery .product-card:hover {
+	transform: translateY(-8px) scale(1.03);
+	box-shadow: 0 8px 24px rgba(55,143,231,0.13);
+}
+.products-gallery img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.products-gallery p {
+	margin-top: 12px;
+	font-weight: 500;
+	color: #222;
+}
+
+/* Footer */
+footer {
+	background: #0d233e;
+	color: #fff;
+	padding: 2.5rem 1rem 1.5rem 1rem;
+	text-align: center;
+	margin-top: 2rem;
+}
+.footer-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.footer-about, .footer-links, .footer-contact {
+	min-width: 220px;
+	margin-bottom: 1.5rem;
+}
+.footer-about h3 {
+	color: #6cb6f7;
+	margin-bottom: 0.5rem;
+}
+.footer-links h4, .footer-contact h4 {
+	color: #6cb6f7;
+	margin-bottom: 0.5rem;
+}
+.footer-links ul {
+	list-style: none;
+	padding: 0;
+}
+.footer-links a {
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+.footer-links a:hover {
+	color: #6cb6f7;
+}
