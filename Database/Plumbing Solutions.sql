@@ -77,3 +77,22 @@ CREATE TABLE enrollments (
     FOREIGN KEY (trainee_id) REFERENCES trainees(trainee_id),
     FOREIGN KEY (program_id) REFERENCES training_programs(program_id)
 );
+-- 9. Apprenticeship Applications table
+CREATE TABLE training_applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    message TEXT,
+    date_applied DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 10. Booking Requests table
+CREATE TABLE service_requests (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    message TEXT,
+    date_of_booking DATETIME DEFAULT CURRENT_TIMESTAMP
+);
