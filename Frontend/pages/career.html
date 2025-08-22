@@ -8,18 +8,85 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="company-logo">
-            <span>The Logo</span>
-        </div>
+    <div class="company-logo">
+            <img src="../images/pew.png" alt="Company Logo" class="logo-img" style="height:95px;width:auto;">
+    </div>
         <ul class="nav-links">
             <li><a href="home.html" class="nav-item">Home</a></li>
             <li><a href="Services.html" class="nav-item">Services</a></li>
-            <li><a href="About.html" class="nav-item">About Us</a></li>
-            <li><a href="Career.html" class="nav-item">Career</a></li>
+            <li><a href="about us.html" class="nav-item">About Us</a></li>
+            <li><a href="Career.html" class="nav-item">Training</a></li>
         </ul>
     </nav>
-    <div>
-        <img>
+    
+   <!-- Hero -->
+  <section class="hero">
+    <h1>Training & Apprenticeship</h1>
+    <p>Join our professional air conditioning training programs and gain hands-on experience from industry experts.</p>
+  </section>
+
+  <!-- Training Info -->
+  <section class="training-info">
+    <h2>Why Choose Our Training?</h2>
+    <p>Our programs are designed to give you practical skills, mentorship, and real-world experience.</p>
+    <div class="training-grid">
+      <div class="training-card">
+        <h3>Hands-On Learning</h3>
+        <p>Work directly with equipment and learn through real-life projects.</p>
+      </div>
+      <div class="training-card">
+        <h3>Expert Mentorship</h3>
+        <p>Receive guidance from experienced engineers and technicians.</p>
+      </div>
+      <div class="training-card">
+        <h3>Job Readiness</h3>
+        <p>Graduate with the skills employers are looking for in the industry.</p>
+      </div>
     </div>
+  </section>
+
+  <!-- Application Form -->
+  <div class="form-container">
+    <h2>Apply for Training</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="program">Select Program</label>
+        <select id="program" required>
+          <option value="">-- Choose a Program --</option>
+          <option value="apprenticeship">Apprenticeship</option>
+          <option value="short-course">Short Course</option>
+          <option value="professional">Professional Certification</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Why do you want to join?</label>
+        <textarea id="message" rows="4" placeholder="Tell us about your motivation..."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit Application</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Prince Koo Engineering. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
