@@ -18,7 +18,7 @@ def book_service(request):
     context = {
         'form': form
     }
-    return render(request, "engineer/services.html", context)
+    return render(request, "engineer/Services.html", context)
 
 
 def about(request):
