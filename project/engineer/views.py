@@ -6,20 +6,6 @@ def home(request):
     return render(request, "engineer/home.html")
 
 
-def book_service(request):
-    if request.method == "POST":
-        form = ServiceRequestForm(request.POST)
-        if form.is_valid():
-            form.save()  # saves directly to service_requests table
-            return redirect('services')  # redirect after submission
-    else:
-        form = ServiceRequestForm()
-    
-    context = {
-        'form': form
-    }
-    return render(request, "engineer/Services.html", context)
-
 
 def about(request):
     return render(request, "engineer/about_us.html")
