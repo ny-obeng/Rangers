@@ -30,7 +30,7 @@ def apply_training(request):
         form = TrainingApplicationForm(request.POST)
         if form.is_valid():
             form.save()  # saves directly to enrollments table
-            return redirect('career')  # redirect after submission
+            return redirect('application_success')  # redirect after submission
     else:
         form = TrainingApplicationForm()
     
@@ -44,7 +44,13 @@ def booking_view(request):
         form = ServiceRequestForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('services')  # Or wherever you want after booking
+            return redirect('booking_success')  # Or wherever you want after booking
     else:
         form = ServiceRequestForm()
     return render(request, "engineer/booking.html", {'form': form})
+
+def booking_success(request):
+    return render(request, 'engineer/booking_success.html')
+
+def application_success(request):
+    return render(request, 'engineer/application_success.html')
