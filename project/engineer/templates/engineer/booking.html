@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Service</title>
+  <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+</head>
+<body>
+
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Book a Service</h1>
+    <p>Reliable, affordable, and efficient air conditioning solutions at your fingertips.</p>
+  </section>
+
+  <!-- Booking Form -->
+  <div class="form-container">
+    <h2>Service Booking Form</h2>
+    <form method="POST" novalidate>
+      {% csrf_token %}
+
+      <div class="form-group">
+        {{ form.full_name.label_tag }}
+        {{ form.full_name }}
+        {% if form.full_name.errors %}
+          <div class="error">{{ form.full_name.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+        {% if form.email.errors %}
+          <div class="error">{{ form.email.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.phone_number.label_tag }}
+        {{ form.phone_number }}
+        {% if form.phone_number.errors %}
+          <div class="error">{{ form.phone_number.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.service_type.label_tag }}
+        {{ form.service_type }}
+        {% if form.service_type.errors %}
+          <div class="error">{{ form.service_type.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.preferred_date.label_tag }}
+        {{ form.preferred_date }}
+        {% if form.preferred_date.errors %}
+          <div class="error">{{ form.preferred_date.errors }}</div>
+        {% endif %}
+      </div>
+
+      <div class="form-group">
+        {{ form.message.label_tag }}
+        {{ form.message }}
+        {% if form.message.errors %}
+          <div class="error">{{ form.message.errors }}</div>
+        {% endif %}
+      </div>
+
+      <button type="submit" class="btn">Submit Booking</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container" style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;">
+      <div class="footer-about">
+        <h3>Prince Koo Engineering</h3>
+        <p>Reliable air conditioning services for homes and businesses. Your comfort is our priority.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'career' %}">Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: info@princekoo.com</p>
+        <p>Phone: +233 123 456 789</p>
+      </div>
+    </div>
+    <div>
+      <p>&copy; 2025 Prince Koo Engineering. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

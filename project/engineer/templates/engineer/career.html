@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career</title>
+  <link rel="stylesheet" href="{% static 'css/career.css' %}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="company-logo">
+      <img src="{% static 'images/pew.png' %}" alt="Company Logo" class="logo-img" style="height:95px;width:auto;">
+    </div>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}" class="nav-item">Home</a></li>
+      <li><a href="{% url 'services' %}" class="nav-item">Services</a></li>
+      <li><a href="{% url 'about' %}" class="nav-item">About Us</a></li>
+      <li><a href="{% url 'career' %}" class="nav-item active">Training</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Training & Apprenticeship</h1>
+    <p>Join our professional air conditioning training programs and gain hands-on experience from industry experts.</p>
+  </section>
+
+  <!-- Training Info -->
+  <section class="training-info">
+    <h2>Why Choose Our Training?</h2>
+    <p>Our programs are designed to give you practical skills, mentorship, and real-world experience.</p>
+    <div class="training-grid">
+      <div class="training-card">
+        <h3>Hands-On Learning</h3>
+        <p>Work directly with equipment and learn through real-life projects.</p>
+      </div>
+      <div class="training-card">
+        <h3>Expert Mentorship</h3>
+        <p>Receive guidance from experienced engineers and technicians.</p>
+      </div>
+      <div class="training-card">
+        <h3>Job Readiness</h3>
+        <p>Graduate with the skills employers are looking for in the industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <div class="form-container">
+    <h2>Apply for Training</h2>
+
+    <form method="POST" novalidate>
+    {% csrf_token %}
+
+    <div class="form-group">
+        {{ form.full_name.label_tag }}
+        {{ form.full_name }}
+        {% if form.full_name.errors %}
+            <div class="error">{{ form.full_name.errors }}</div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.email.label_tag }}
+        {{ form.email }}
+        {% if form.email.errors %}
+            <div class="error">{{ form.email.errors }}</div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.phone_number.label_tag }}
+        {{ form.phone_number }}
+        {% if form.phone_number.errors %}
+            <div class="error">{{ form.phone_number.errors }}</div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.program.label_tag }}
+        {{ form.program }}
+        {% if form.program.errors %}
+            <div class="error">{{ form.program.errors }}</div>
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.motivation.label_tag }}
+        {{ form.motivation }}
+        {% if form.motivation.errors %}
+            <div class="error">{{ form.motivation.errors }}</div>
+        {% endif %}
+    </div>
+
+    <button type="submit" class="btn">Submit Application</button>
+</form>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Prince Koo Engineering. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

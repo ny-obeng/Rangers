@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="company-logo">
+      <img src="{% static 'images/pew.png' %}" alt="Company Logo" class="logo-img" style="height:95px;width:auto;">
+    </div>
+    <ul class="nav-links">
+      <li><a href="{% url 'home' %}" class="active">Home</a></li>
+      <li><a href="{% url 'services' %}" class="nav-item">Services</a></li>
+      <li><a href="{% url 'about' %}" class="nav-item">About Us</a></li>
+      <li><a href="{% url 'career' %}" class="nav-item">Training</a></li>
+    </ul>
+  </nav>
+
+  <!-- Background -->
+  <div class="background">
+    <img src="https://i.pinimg.com/736x/58/47/b8/5847b80c513687995a0c6af2de041a86.jpg" 
+         alt="Decorative background image" class="bg-image">
+  </div>
+
+  <!-- Hero Section -->
+  <div class="content">
+    <h1>Your Comfort, Our Priority</h1><br>
+    <p>
+      Welcome to Prince Koo Engineering, your reliable partner in air conditioning installation, servicing, and repairs. 
+      We are committed to keeping your home and business cool, comfortable, and energy-efficient all year round. <br><br>
+      With a team of highly trained technicians and a passion for quality service, we provide fast, dependable, and affordable solutions. 
+      Whether it’s routine maintenance, system upgrades, or emergency repairs, we’ve got you covered.
+    </p>
+    <a href="{% url 'services' %}" class="btn">See Services</a>
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align:center;">
+    <div class="footer-container" style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;">
+      <div class="footer-about">
+        <h3>Prince Koo Engineering</h3>
+        <p>Reliable air conditioning services for homes and businesses. Your comfort is our priority.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'career' %}">Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: info@princekoo.com</p>
+        <p>Phone: +233 123 456 789</p>
+      </div>
+    </div>
+    <div>
+      <p>&copy; 2025 Prince Koo Engineering. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
