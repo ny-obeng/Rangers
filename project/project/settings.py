@@ -32,8 +32,8 @@ CSRF_TRUSTED_ORIGINS = ["https://web-production-b6634.up.railway.app",
                         
                         ]
 
-CSRF_COOKIE_SECURE = False
-SESSION_SOOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
+SESSION_SOOKIE_SECURE = True
 
 
 # Application definition
