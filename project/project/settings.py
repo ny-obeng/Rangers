@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'project.project.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR}/db.sqlite3",  # Local fallback
+        default=os.environ.get("DATABASE_URL"),  # Railway will inject this
         conn_max_age=600,
-        ssl_require= False
+        ssl_require=True
     )
 }
 
